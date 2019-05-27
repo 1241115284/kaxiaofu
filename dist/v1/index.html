@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name=viewport content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=x5-fullscreen content=true><meta name=browsermode content=application><link rel=icon href="data:;base64,="><title>卡小福</title><link href=/v1/static/css/app.0a57f5774ce0c52f885baacfe9cdfc20.css rel=stylesheet></head><style>body{
+      font-family: Helvetica, Arial, sans-serif;
+    }</style><body><div id=app></div><script type=text/javascript src=/v1/static/js/manifest.6bf0dc80c45a1a7bdc78.js></script><script type=text/javascript src=/v1/static/js/vendor.834a1dc9e85a74d11b0a.js></script><script type=text/javascript src=/v1/static/js/app.e8ca822ec1153dfae5e8.js></script></body><script>var uuid=""
+  function getUuid() {
+            var s = [];
+            var hexDigits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            for (var i = 0; i < 36; i++) {
+                s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+             }
+            s[14] = "4";
+            s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); 
+            s[8] = s[13] = s[18] = s[23] = "-";
+            var uuid = s.join("");
+            return uuid;
+          
+        }
+   uuid =getUuid()
+ 
+   if(!localStorage.getItem("uniqueId")){
+    localStorage.setItem("uniqueId",uuid)
+   }</script></html>
